@@ -1,4 +1,7 @@
-
+---
+layout: base
+title: Issues Frontend
+---
 
 <html lang="en">
 <head>
