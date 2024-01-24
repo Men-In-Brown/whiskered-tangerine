@@ -7,17 +7,16 @@ title: Issues Frontend
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Issue Tracker</title>
 </head>
 <style>
     body {
-        font-family: Arial, sans-serif;
+        /* font-family: Arial, sans-serif; */
         margin: 0;
         padding: 0;
     }
     header {
-        background-color: #333;
+        /* background-color: #333; */
         color: white;
         text-align: center;
         padding: 1em 0;

@@ -8,7 +8,7 @@ title: Demo Frontend
     body {
         background-color: #333;
         color: #fff;
-        font-family: Arial, sans-serif;
+        /* font-family: Arial, sans-serif; */
     }
     .container {
         max-width: 800px;
