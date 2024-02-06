@@ -16,6 +16,10 @@ title: Assignment
           width: 80%;
           padding: 5px; 
       }
+      #assignmentForm label, #assignmentForm input {
+          margin: 0;
+          padding: 0;
+      }
     </style>
 </head>
 
