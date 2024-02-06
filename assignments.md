@@ -86,6 +86,8 @@ title: Assignment
   </script>
 
   <script>
+    var url = new URL(window.location.href);
+    var id = url.searchParams.get("id");
     document.getElementById('assignmentForm').addEventListener('submit', function(event) {
     event.preventDefault();
   
@@ -96,7 +98,7 @@ title: Assignment
     var link = document.getElementById('link').value;
   
     var data = {
-      id: id, //Id is already defined in assignmentPageBuilder.js
+      id: id,
       title: title,
       desc: desc,
       contributors: contributors,
