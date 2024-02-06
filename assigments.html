@@ -13,7 +13,7 @@ icon: fa-book
 <script>
 var id = window.location.pathname.split('/')[3]; // Get the ID from the URL
 
-$.get("https://tangerine.stu.nighthawkcodingsociety.com/api/assignments/" , function(data) {
+$.get("http://localhost:8087/api/assignments/" , function(data) {
     var assignment = data; // The data from the server is now the assignment
     var html;
     if(data.hasOwnProperty(id.toString())) {
