@@ -1,0 +1,51 @@
+---
+layout: base
+---
+
+<div id="assignment"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var id = window.location.pathname.split('/')[3]; // Get the ID from the URL
+
+var data = [
+  {
+    "id": 1,
+    "title": "title3",
+    "desc": "desc",
+    "link": "link",
+    "maxPoints": 3,
+    "submissions": {
+      "username": {
+        "link": "link",
+        "contributors": [ "user1", "user2" ],
+        "title": "title",
+        "desc": "desc"
+      }
+    }
+  }
+];
+
+var assignment = data.find(function(a) { return a.id == id; }); // Find the assignment with the matching ID
+
+if (assignment) {
+  var html = '<h1>' + assignment.title + '</h1>';
+  html += '<h2>Points: ' + assignment.maxPoints + '</h2>';
+  html += '<h2>Corresponding Notebook</h2>';
+  html += '<p>' + assignment.desc + '</p>';
+
+  for (var username in assignment.submissions) {
+    var submission = assignment.submissions[username];
+    html += '<div style="border:1px solid black; margin:10px; padding:10px;">';
+    html += '<h3>' + submission.title + '</h3>';
+    html += '<p>Contributors: ' + submission.contributors.join(', ') + '</p>';
+    html += '<p><a href="' + submission.link + '">Link</a></p>';
+    html += '<p>' + submission.desc + '</p>';
+    html += '</div>';
+  }
+
+  $('#assignment').html(html);
+} else {
+  $('#assignment').html('<p>Assignment not found.</p>');
+}
+</script>
