@@ -20,11 +20,11 @@ $.get("http://localhost:8087/api/assignments/" , function(data) {
     var html;
     
     // Check if an object with the specified id exists in the array
-    var entryExists = data.some(function(item) {
+    /*var entryExists = data.some(function(item) {
       return item.id === id;
-    });
+    });*/
 
-    if(entryExists) {
+    //if(entryExists) {
       var assignment = data[id];
         if (assignment) {
             html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">' + assignment.title + '</h1>';
@@ -44,8 +44,8 @@ $.get("http://localhost:8087/api/assignments/" , function(data) {
     }
   
     $('#assignment').html(html);
-  } else {
+  /*} else {
     $('#assignment').html('<p>Assignment at id ' + id + ' not found.</p>');
-  }
+  }*/
 });
 </script>
