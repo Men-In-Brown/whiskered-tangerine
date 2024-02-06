@@ -1,79 +1,72 @@
 ---
 layout: page
-# title: Home
+icon: fa-home
+title: Assignments
 ---
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Bell Schedule Tracker</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 5px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #datetime {
-            text-align: center;
-            font-size: 20px;
-            margin-top: 20px;
-            display: block;
-        }
-        #scheduleResults {
-            background-color: #fff;
-            border: 0.5px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            max-width: 50%;
-            margin-top: 50px;
-        }
-        #scheduleResults p {
+<style>
+    body {
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin: 10px 0;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #datetime {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+        display: block;
+    }
+    #scheduleResults {
+        background-color: #fff;
+        border: 0.5px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        max-width: 50%;
+        margin-top: 50px;
+    }
+    #scheduleResults p {
         margin: 0;
         padding: 5px 0;
         border-bottom: 1px solid #ccc;
         font-size: 16px; /* Adjust the font size as needed */
     }
-        #inputSchedule, #scheduleResults {
-            display: inline-block;
-            width: 49%;
-            vertical-align: top;
-        }
-        #inputSchedule {
-            margin: 20px auto;
-        }
-    </style>
-</head>
+    #inputSchedule, #scheduleResults {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+    }
+    #inputSchedule {
+        margin: 20px auto;
+    }
+</style>
 <body>
     <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
         <h1 id="typewriter"></h1>

@@ -1,5 +1,5 @@
-title: whiskered-tangerine
-description: "Github has Issues"
+title: Tangerine
+description: "Issues"
 owner_name: tangerine boys
 github_username: Soham360
 github_repo: "whiskered-tangerine"
@@ -14,3 +14,4 @@ minima:
 plugins:
 - jekyll-remote-theme
 future: true
+avatar: assets/images/avatar.jpg

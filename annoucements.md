@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Demo Frontend
+title: Annoucements
 ---
 
 <html lang="en">
