@@ -11,6 +11,8 @@ title: Assignment
 <body>
   <h1>Test</h1>
   <div id="assignment"></div>
+  <div id="assignment2"></div>
+  
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
@@ -45,9 +47,9 @@ $.get("http://localhost:8087/api/assignments/" , function(data) {
         html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">No assignment with id ' + id + ' exists</h1>'
     }
   
-    $('#assignment').html(html);
+    $('#assignment2').html(html);
   /*} else {
-    $('#assignment').html('<p>Assignment at id ' + id + ' not found.</p>');
+    $('#assignment2').html('<p>Assignment at id ' + id + ' not found.</p>');
   }*/
 });
 </script>
