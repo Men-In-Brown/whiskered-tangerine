@@ -14,11 +14,8 @@ layout: page
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
         $.ajax({
-            url: "https//:men-in-brown.github.io",
+            url: "http://localhost:8087/api/assignments/",
             type: "GET",
-            headers: {
-                "Host": "your-custom-hostname-here"
-            },
             success: function(data) {
         var assignments = data; 
         var html = '';
