@@ -15,9 +15,16 @@ var url = new URL(window.location.href);
 var id = url.searchParams.get("id");
 
 $.get("http://localhost:8087/api/assignments/" , function(data) {
-    var assignment = data; // The data from the server is now the assignment
+ // The data from the server is now the assignment
     var html;
-    if(data.hasOwnProperty(id.toString())) {
+    
+    // Check if an object with the specified id exists in the array
+    var entryExists = data.some(function(item) {
+      return item.id === id;
+    });
+
+    if(entryExists) {
+      var assignment = data[id];
         if (assignment) {
             html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">' + assignment.title + '</h1>';
             html += '<p style="font-size: 0.8em; font-style: italic; margin-bottom: 0; font-family: Oxygen;">Worth ' + assignment.maxPoints + ' Points --- <a href="' + assignment.link + '" style="text-decoration: underline;">Corresponding Notebook</a></p>';
