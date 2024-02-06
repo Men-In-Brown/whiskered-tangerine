@@ -9,8 +9,10 @@ title: Assignment
     <style>
       #assignmentForm {
         font-size: 0.8em;
+        padding:0px;
       }
       #assignmentForm input[type="text"] {
+          font-size: 0.8em;
           width: 80%;
           padding: 5px; 
       }
@@ -33,6 +35,7 @@ title: Assignment
     <input type="text" id="link" name="link"><br>
     <input type="submit" value="Submit">
   </form>
+  <br><br>
 
   <div id="submissionsDiv"></div>
 
