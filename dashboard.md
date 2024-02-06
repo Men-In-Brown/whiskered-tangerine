@@ -1,13 +1,12 @@
 ---
 layout: page
+title: Assignments Dashboard
 ---
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 
-
-<h1>Assignments Dashboard</h1>
 <div id="assignments"></div>
 
 
