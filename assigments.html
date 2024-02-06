@@ -11,7 +11,7 @@ icon: fa-book
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-var url = new URL(urlString);
+var url = new URL(window.location.href);
 var id = url.searchParams.get("id");
 
 $.get("http://localhost:8087/api/assignments/" , function(data) {
