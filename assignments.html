@@ -8,10 +8,11 @@ title: Assignment
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 
-<div id="assignment"></div>
+<body>
+  <div id="assignment"></div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
 var url = new URL(window.location.href);
 var id = url.searchParams.get("id");
 
@@ -25,7 +26,7 @@ $.get("http://localhost:8087/api/assignments/" , function(data) {
     });*/
 
     //if(entryExists) {
-      var assignment = data[id];
+      var assignment = data[id-1];
         if (assignment) {
             html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">' + assignment.title + '</h1>';
             html += '<p style="font-size: 0.8em; font-style: italic; margin-bottom: 0; font-family: Oxygen;">Worth ' + assignment.maxPoints + ' Points --- <a href="' + assignment.link + '" style="text-decoration: underline;">Corresponding Notebook</a></p>';
@@ -49,3 +50,4 @@ $.get("http://localhost:8087/api/assignments/" , function(data) {
   }*/
 });
 </script>
+</body>
