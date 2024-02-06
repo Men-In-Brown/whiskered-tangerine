@@ -9,6 +9,7 @@ title: Assignment
 </head>
 
 <body>
+  <h1>Test</h1>
   <div id="assignment"></div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
