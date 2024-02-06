@@ -98,12 +98,12 @@ title: Assignment
     var link = document.getElementById('link').value;
   
     var data = {
-      id: id,
-      title: title,
-      desc: desc,
-      contributors: contributors,
-      username: username,
-      link: link
+      "id": id,
+      "title": title,
+      "desc": desc,
+      "contributors": contributors,
+      "username": username,
+      "link": link
     };
   
     fetch('http://localhost:8087/api/assignments/submit', {
