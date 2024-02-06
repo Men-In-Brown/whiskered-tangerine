@@ -13,7 +13,7 @@ layout: page
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $.get("http://localhost:8087/api/assignments", function(data) {
+    $.get("https://tangerine.stu.nighthawkcodingsociety.com/api/assignments", function(data) {
     var assignments = data; 
     var html = '';
     for (var i = 0; i < assignments.length; i++) {
