@@ -100,11 +100,11 @@ title: Assignment
     console.log(id + title + desc + contributors + username + link);
 
     var data = {
-      "id": id.toString(),
-      "title": title,
+      "id": "1",
+      "title": "title",
       "desc": desc,
       "contributors": contributors,
-      "username": username,
+      "username": "username",
       "link": link
     };
   
