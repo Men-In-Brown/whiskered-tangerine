@@ -6,6 +6,15 @@ title: Assignment
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <style>
+      #assignmentForm {
+        font-size: 0.8em;
+      }
+      #assignmentForm input[type="text"] {
+          width: 80%;
+          padding: 5px; 
+      }
+    </style>
 </head>
 
 <body>
@@ -62,7 +71,7 @@ title: Assignment
         }
       
         $('#assignmentDiv').html(html);
-        $('#submission').html(html2);
+        $('#submissionsDiv').html(html2);
       /*} else {
         $('#assignmentDiv').html('<p>Assignment at id ' + id + ' not found.</p>');
       }*/
