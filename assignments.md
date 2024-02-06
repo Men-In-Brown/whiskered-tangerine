@@ -97,8 +97,10 @@ title: Assignment
     var username = document.getElementById('username').value;
     var link = document.getElementById('link').value;
   
+    console.log(id + title + desc + contributors + username + link);
+
     var data = {
-      "id": id,
+      "id": id.toString(),
       "title": title,
       "desc": desc,
       "contributors": contributors,
