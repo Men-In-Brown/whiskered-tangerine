@@ -86,6 +86,7 @@ title: Assignment
   </script>
 
   <script>
+    window.onload = function() {
     var url = new URL(window.location.href);
     var id = url.searchParams.get("id");
     document.getElementById('assignmentForm').addEventListener('submit', function(event) {
@@ -123,5 +124,6 @@ title: Assignment
       console.error('Error:', error);
     });
   });
+  }
   </script>
 </body>
