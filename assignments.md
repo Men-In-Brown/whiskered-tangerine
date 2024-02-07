@@ -101,7 +101,7 @@ title: Assignment
     console.log(id + title + desc + contributors + username + link);
 
     var data = {
-      "id": "1",
+      "id": id,
       "title": "title",
       "desc": desc,
       "contributors": contributors,
