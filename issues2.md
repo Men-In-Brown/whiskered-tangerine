@@ -18,7 +18,6 @@ title: Issues
 </div>
 
 <br><br><br>
-
 <div id="issuesDiv"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -29,11 +28,11 @@ title: Issues
       var title = $('#title2').val();
       var desc = $('#desc').val();
       var username = $('#username').val();
-    $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username })
-    .done(function() {
-      location.reload();
-    });
-    });
+        $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username }, function(data, status) {
+            if(status === 'success') {
+                location.reload(); // Refresh the page
+            }
+        });
     $.ajax({
       url: "http://localhost:8087/api/issues/",
       type: "GET",
