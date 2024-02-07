@@ -28,13 +28,13 @@ title: Assignment
   
   <form id="assignmentForm">
     <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title"><br>
+    <input type="text" id="title2" name="title"><br>
     <label for="desc">Description:</label><br>
     <input type="text" id="desc" name="desc"><br>
     <label for="contributors">Contributors (comma separated):</label><br>
     <input type="text" id="contributors" name="contributors"><br>
     <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
+    <input type="text" id="username2" name="username"><br>
     <label for="link">Link:</label><br>
     <input type="text" id="link" name="link"><br>
     <input type="submit" value="Submit">
@@ -92,20 +92,20 @@ title: Assignment
     document.getElementById('assignmentForm').addEventListener('submit', function(event) {
     event.preventDefault();
   
-    var title = document.getElementById('title').value;
+    var title = document.getElementById('title2').value;
     var desc = document.getElementById('desc').value;
     var contributors = document.getElementById('contributors').value.split(',');
-    var username = document.getElementById('username').value;
+    var username = document.getElementById('username2').value;
     var link = document.getElementById('link').value;
   
     console.log(id + title + desc + contributors + username + link);
 
     var data = {
       "id": id,
-      "title": "title",
+      "title": title,
       "desc": desc,
       "contributors": contributors,
-      "username": "username",
+      "username": username,
       "link": link
     };
   
