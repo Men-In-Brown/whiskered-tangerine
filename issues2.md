@@ -76,7 +76,7 @@ title: Issues
       var id = $(this).data('id');
       var username = $(this).find('input[name="username"]').val();
       var reply = $(this).find('textarea[name="reply"]').val();
-      $.post('http://localhost:8087/api/issues/comment', { {id: id, username: username, reply: reply} });
+      $.post('http://localhost:8087/api/issues/comment', { id: id, username: username, reply: reply });
     });
   });
 </script>
