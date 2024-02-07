@@ -29,7 +29,6 @@ title: Issues
       var username = $('#username').val();
       $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username });
     });
-
     $.ajax({
       url: "http://localhost:8087/api/issues/",
       type: "GET",
@@ -45,7 +44,6 @@ title: Issues
             desc = desc.substring(0, 100) + '...';
           }
           html += '<p style="font-family: Oxygen;">' + desc + '</p>';
-
           // Display replies
           var replies = issue.replies;
           for (var j in replies) {
@@ -56,7 +54,6 @@ title: Issues
             html += '<p style="font-style: italic;">- By: ' + reply.username + '</p>';
             html += '</div>';
           }
-
           html += '<button class="reply-button" data-id="' + issue.id + '">Reply</button>';
           html += '<div id="reply-form-' + issue.id + '" style="display: none;">';
           html += '<form class="reply-form" data-id="' + issue.id + '">';
@@ -70,18 +67,16 @@ title: Issues
         $('#issuesDiv').html(html);
       }
     });
-
     $(document).on('click', '.reply-button', function() {
       var id = $(this).data('id');
       $('#reply-form-' + id).show();
     });
-
     $(document).on('submit', '.reply-form', function(e) {
       e.preventDefault();
       var id = $(this).data('id');
       var username = $(this).find('input[name="username"]').val();
       var reply = $(this).find('textarea[name="reply"]').val();
-      $.post('http://localhost:8087/api/issues/comment', { id: id, username: username, reply: reply });
+      $.post('http://localhost:8087/api/issues/comment', { {id: id, username: username, reply: reply} });
     });
   });
 </script>
