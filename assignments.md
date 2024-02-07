@@ -86,7 +86,6 @@ title: Assignment
       /*} else {
         $('#assignmentDiv').html('<p>Assignment at id ' + id + ' not found.</p>');
       }*/
-      location.reload();
     });
   </script>
 
@@ -123,7 +122,7 @@ title: Assignment
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
+        location.reload();
     })
     .catch((error) => {
       console.error('Error:', error);
