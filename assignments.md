@@ -24,7 +24,10 @@ title: Assignment
 </head>
 
 <body>
-  <button src="https://men-in-brown.github.io/whiskered-tangerine/dashboard.html">Back</button>
+  <a href="https://men-in-brown.github.io/whiskered-tangerine/dashboard.html">
+    <button>Back</button>
+  </a>
+
   <div id="assignmentDiv"></div>
   
   <form id="assignmentForm">
