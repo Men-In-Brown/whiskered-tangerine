@@ -39,15 +39,28 @@ title: Issues
         for (var i = 0; i < issues.length; i++) {
           var issue = issues[i];
           html += '<div style="border:1px solid #333; margin:0px; padding:5px;">';
-          html += '<h3 style="font-size: 1.6em; font-weight: bold; font-family: Oxygen;"><a href="/whiskered-tangerine/issues.html/?id=' + issue.id + '" style="text-decoration: underline;">' + issue.title + '</a></h3>';
+          html += '<h3 style="font-size: 1.6em; font-weight: bold; font-family: Oxygen;"><a " style="text-decoration: underline;">' + issue.title + '</a></h3>';
           var desc = issue.desc;
           if (desc.length > 100) {
             desc = desc.substring(0, 100) + '...';
           }
           html += '<p style="font-family: Oxygen;">' + desc + '</p>';
+
+          // Display replies
+          var replies = issue.replies;
+          for (var j in replies) {
+            var reply = replies[j];
+            var replyStyle = reply.bot ? 'style="background-color: #f0f0f0; border-radius: 10px;"' : '';
+            html += '<div ' + replyStyle + '>';
+            html += '<p>' + reply.desc + '</p>';
+            html += '<p style="font-style: italic;">- By: ' + reply.username + '</p>';
+            html += '</div>';
+          }
+
           html += '<button class="reply-button" data-id="' + issue.id + '">Reply</button>';
           html += '<div id="reply-form-' + issue.id + '" style="display: none;">';
           html += '<form class="reply-form" data-id="' + issue.id + '">';
+          html += '<input type="text" name="username" placeholder="Your username">';
           html += '<textarea name="reply" placeholder="Your reply"></textarea>';
           html += '<button type="submit">Submit reply</button>';
           html += '</form>';
@@ -66,8 +79,9 @@ title: Issues
     $(document).on('submit', '.reply-form', function(e) {
       e.preventDefault();
       var id = $(this).data('id');
+      var username = $(this).find('input[name="username"]').val();
       var reply = $(this).find('textarea[name="reply"]').val();
-      $.post('http://localhost:8087/api/issues/comment', { id: id, reply: reply });
+      $.post('http://localhost:8087/api/issues/comment', { id: id, username: username, reply: reply });
     });
   });
 </script>
