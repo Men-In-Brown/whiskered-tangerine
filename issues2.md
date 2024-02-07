@@ -17,7 +17,7 @@ title: Issues
   </form>
 </div>
 
-<div id="issues"></div>
+<div id="issuesDiv"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -54,7 +54,7 @@ title: Issues
           html += '</div>';
           html += '</div>';
         }
-        $('#issues').html(html);
+        $('#issuesDiv').html(html);
       }
     });
 
