@@ -67,7 +67,7 @@ title: Assignment
             
                 for (var username in assignment.submissions) {
                   var submission = assignment.submissions[username];
-                  html2 = '<div style="border:1px solid #333; margin:0px; padding:5px;">';
+                  html2 += '<div style="border:1px solid #333; margin:0px; padding:5px;">';
                   html2 += '<h3 style="font-size: 1.6em; font-weight: bold; font-family: Oxygen;"><a href="' + submission.link + '" style="text-decoration: underline;">' + submission.title + '</a></h3>';
                   html2 += '<p style="font-style: italic; font-family: Oxygen;">Posted by ' + username + ' -- Contributed to by ' + submission.contributors.join(', ') + '</p>';
                   html2 += '<p style="font-family: Oxygen;">' + submission.desc + '</p>';
