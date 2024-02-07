@@ -29,7 +29,7 @@ title: Issues
       var desc = $('#desc').val();
       var username = $('#username').val();
       $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username });
-    });
+    }); 
     $.ajax({
       url: "http://localhost:8087/api/issues/",
       type: "GET",
