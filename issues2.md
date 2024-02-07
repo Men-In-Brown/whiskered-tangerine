@@ -28,9 +28,7 @@ title: Issues
       var desc = $('#desc').val();
       var username = $('#username').val();
       $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username });
-        success: function(msg) {
-            location.reload();
-        }
+      
     });
     $.ajax({
       url: "http://localhost:8087/api/issues/",
@@ -87,7 +85,7 @@ title: Issues
         dataType: 'json',
         async: false,
         success: function(msg) {
-            location.reload();
+
         }
     });
     });
