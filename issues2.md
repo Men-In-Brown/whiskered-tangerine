@@ -17,6 +17,8 @@ title: Issues
   </form>
 </div>
 
+<br><br><br>
+
 <div id="issuesDiv"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -28,7 +30,9 @@ title: Issues
       var desc = $('#desc').val();
       var username = $('#username').val();
       $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username });
-      
+        .done(function() {
+        location.reload();
+        });
     });
     $.ajax({
       url: "http://localhost:8087/api/issues/",
