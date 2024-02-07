@@ -30,6 +30,7 @@ title: Assignments Dashboard
             html += '</div>';
         }
         $('#assignments').html(html);
+        location.reload();
         }
     });
 </script>

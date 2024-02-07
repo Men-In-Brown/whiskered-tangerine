@@ -86,6 +86,7 @@ title: Assignment
       /*} else {
         $('#assignmentDiv').html('<p>Assignment at id ' + id + ' not found.</p>');
       }*/
+      location.reload();
     });
   </script>
 
