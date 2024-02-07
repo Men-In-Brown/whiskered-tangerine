@@ -72,11 +72,22 @@ title: Issues
       $('#reply-form-' + id).show();
     });
     $(document).on('submit', '.reply-form', function(e) {
-      e.preventDefault();
-      var id = $(this).data('id');
-      var username = $(this).find('input[name="username"]').val();
-      var reply = $(this).find('textarea[name="reply"]').val();
-      $.post('http://localhost:8087/api/issues/comment', { id: id, username: username, reply: reply });
+    e.preventDefault();
+    var id = $(this).data('id');
+    var username = $(this).find('input[name="username"]').val();
+    var reply = $(this).find('textarea[name="reply"]').val();
+    $.ajax({
+        url: 'http://localhost:8087/api/issues/comment',
+        type: 'POST',
+        data: JSON.stringify({ id: id, username: username, reply: reply }),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        success: function(msg) {
+            alert(msg);
+        }
     });
+    });
+
   });
 </script>
