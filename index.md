@@ -1,5 +1,5 @@
 ---
 layout: page
 icon: fa-home
-title: Assignments
+title: Login
 ---
