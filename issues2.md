@@ -79,7 +79,7 @@ title: Issues
     $.ajax({
         url: 'http://localhost:8087/api/issues/comment',
         type: 'POST',
-        data: JSON.stringify({ id: id, username: username, reply: reply }),
+        data: JSON.stringify({ id: id.toString(), username: username, reply: reply }),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         async: false,
