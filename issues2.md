@@ -41,9 +41,6 @@ title: Issues
           html += '<div style="border:1px solid #333; margin:0px; padding:5px;">';
           html += '<h3 style="font-size: 1.6em; font-weight: bold; font-family: Oxygen;"><a " style="text-decoration: underline;">' + issue.title + '</a></h3>';
           var desc = issue.desc;
-          if (desc.length > 100) {
-            desc = desc.substring(0, 100) + '...';
-          }
           html += '<p style="font-family: Oxygen;">' + desc + '</p>';
           // Display replies
           var replies = issue.replies;
