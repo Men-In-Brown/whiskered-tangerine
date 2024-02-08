@@ -84,7 +84,7 @@ title: Grades
             // Display each grade
             //data.forEach(grade => {
                 // alert("print data");
-                resultDiv.innerHTML += `Grade: Name: ${data.name}, ${data.score}<br>`;
+                resultDiv.innerHTML += `Grade: Name: ${data.email}, ${data.name}, ${data.assignment}, ${data.score}<br>`;
             //});
         }
     }
