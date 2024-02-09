@@ -31,7 +31,7 @@ title: Issues
       $.post('http://tangerine.stu.nighthawkcodingsociety.com/api/issues/post', { title: title, desc: desc, username: username });
     }); 
     $.ajax({
-      url: "https://localhost:8087/api/issues/",
+      url: "http://localhost:8087/api/issues/",
       type: "GET",
       success: function(data) {
         var issues = data;
