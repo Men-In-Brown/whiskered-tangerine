@@ -113,7 +113,7 @@ title: Assignment
       "link": link
     };
   
-    fetch('http://tangerine.stu.nighthawkcodingsociety.com/api/assignments/submit', {
+    fetch('https://tangerine.stu.nighthawkcodingsociety.com/api/assignments/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

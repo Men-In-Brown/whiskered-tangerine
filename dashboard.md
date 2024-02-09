@@ -13,7 +13,7 @@ title: Assignments Dashboard
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
         $.ajax({
-            url: "http://tangerine.stu.nighthawkcodingsociety.com/api/assignments/",
+            url: "https://tangerine.stu.nighthawkcodingsociety.com/api/assignments/",
             type: "GET",
             success: function(data) {
         var assignments = data; 
