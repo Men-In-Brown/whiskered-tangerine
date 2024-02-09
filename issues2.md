@@ -28,7 +28,7 @@ title: Issues
       var title = $('#title2').val();
       var desc = $('#desc').val();
       var username = $('#username').val();
-      $.post('http://tangerine.stu.nighthawkcodingsociety.com/api/issues/post', { title: title, desc: desc, username: username });
+      $.post('http://localhost:8087/api/issues/post', { title: title, desc: desc, username: username });
     }); 
     $.ajax({
       url: "http://localhost:8087/api/issues/",
