@@ -18,6 +18,8 @@ permalink: flashcards
     <div id="flashcard-container">
         <div id="flashcard-list"></div>
         <form id="flashcard-form">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" required>
             <label for="question">Question:</label>
             <input type="text" id="question" name="question" required>
             <label for="answer">Answer:</label>
@@ -32,6 +34,7 @@ permalink: flashcards
             event.preventDefault();
             const question = document.getElementById('question').value;
             const answer = document.getElementById('answer').value;
+            const topic = document.getElementById('topic').value;
             fetch('http://localhost:8087/api/flashcards/add/', {
                 method: 'POST',
                 headers: {
@@ -40,6 +43,7 @@ permalink: flashcards
                 body: JSON.stringify({
                     question,
                     answer,
+                    topic
                 }),
             })
             .then(response => response.json())
@@ -49,6 +53,7 @@ permalink: flashcards
                 // Clear the form fields
                 document.getElementById('question').value = '';
                 document.getElementById('answer').value = '';
+                document.getElementById('topic').value = ' ';
                 // Refresh the flashcard list
                 loadFlashcards();
             })
