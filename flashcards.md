@@ -116,8 +116,7 @@ permalink: flashcards
             event.preventDefault();
             const question = document.getElementById('question').value;
             const answer = document.getElementById('answer').value;
-            // You can replace this URL with the actual backend API endpoint
-            fetch('http://localhost:8087/api/flashcards/post/', {
+            fetch('http://localhost:8087/api/flashcards/add/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
