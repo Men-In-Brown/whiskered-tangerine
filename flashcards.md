@@ -35,7 +35,7 @@ permalink: flashcards
             const question = document.getElementById('question').value;
             const answer = document.getElementById('answer').value;
             const topic = document.getElementById('topic').value;
-            fetch('http://localhost:8087/api/flashcards/add/', {
+            fetch('http://localhost:8087/api/flashcards/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ permalink: flashcards
         });
         function loadFlashcards() {
             // You can replace this URL with the actual backend API endpoint
-            fetch('http://localhost:8087/api/flashcards/')
+            fetch('http://localhost:8087/api/flashcards')
             .then(response => response.json())
             .then(data => {
                 // Clear the flashcard list
