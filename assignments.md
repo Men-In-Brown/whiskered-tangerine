@@ -51,8 +51,7 @@ title: Assignment
   <script>
     var url = new URL(window.location.href);
     var id = url.searchParams.get("id");
-
-    $.get("http://localhost:8087/api/assignments/" , function(data) {
+    $.get("http://localhost:8087/api/assignments/" + id , function(data) {
     // The data from the server is now the assignment
         var html;
         var html2;
@@ -63,7 +62,7 @@ title: Assignment
         });*/
 
         //if(entryExists) {
-          var assignment = data[id-1];
+          var assignment = data;
             if (assignment) {
                 html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">' + assignment.title + '</h1>';
                 html += '<p style="font-size: 0.8em; font-style: italic; margin-bottom: 0; font-family: Oxygen;">Worth ' + assignment.maxPoints + ' Points --- <a href="' + assignment.link + '" style="text-decoration: underline;">Corresponding Notebook</a></p>';
