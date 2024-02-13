@@ -67,15 +67,13 @@ title: Grades
                 document.getElementById('selectedStudentEmail').textContent = selectedStudentEmail;
             });
             // Fetch assignment data from server
-            fetch('http://localhost:8087/api/assignments/')
+            fetch('http://localhost:8087/api/assignments/') 
                 .then(response => response.json())
                 .then(data => {
                     const dropdown = document.getElementById('assignmentDropdown');
                     data.forEach(assignment => {
                         const option = document.createElement('option');
                         option.textContent = assignment.title;
-                        option.value = assignment.max_points;
-                        //option.textContent = assignment.max_points;
                         dropdown.appendChild(option);
                     });
                 })
@@ -125,8 +123,7 @@ title: Grades
                     const assignmentCell = document.createElement("td");
                     assignmentCell.textContent = student.assignment;
                     const maxscoreCell = document.createElement("td");
-                    const maxgrade = getMaxScore(student.assignment);
-                    maxscoreCell.textContent = document.getElementById("selectedAssignmentMaxPoints");//0;//assignment.max_points;                    
+                    maxscoreCell.textContent = student.maxPoints; // Set maxPoints
                     const gradeCell = document.createElement("td");
                     const gradeInput = document.createElement("input");
                     gradeInput.type = "text";
@@ -147,8 +144,8 @@ title: Grades
                                 "content-type": "application/json",
                                 'Authorization': 'Bearer my-token',
                             },
-                        };          
-                        fetch(`http://localhost:8087/api/grade/update/${student.id}?newEmail=${student.email}&newAssignment=${student.assignment}&newScore=${student.score}`, requestOptions)
+                        };
+                        fetch(`http://localhost:8087/api/grade/update/${student.id}?newEmail=${student.email}&newAssignment=${student.assignment}&newMaxPoints=${student.maxPoints}&newScore=${student.score}`, requestOptions)
                         .then(response => {
                             // trap error response from Web API
                             if (response.status !== 200) {
@@ -172,32 +169,6 @@ title: Grades
                     resultContainer.appendChild(row);
                 });
             }
-        }
-        function getMaxScore() {
-            // alert(student.id + student.email + student.assignment + student.score);
-            const requestOptions = {
-                method: ['PUT'],
-                // body: JSON.stringify(body),
-                headers: {
-                    "content-type": "application/json",
-                    'Authorization': 'Bearer my-token',
-                },
-            };          
-            fetch(`http://localhost:8087/api/assignments/`, requestOptions)
-            .then(response => {
-                // trap error response from Web API
-                if (response.status !== 200) {
-                    const errorMsg = 'Invalid Input - Database Update error: ' + response.status;
-                    console.log(errorMsg);
-                    alert(errorMsg);
-                    return;
-                }
-                // response contains valid result
-                response.json().then(data => {
-                    selectedAssignmentMaxPoints.innerHTML = response.status;
-                })
-            })
-
         }
     </script>
 </body>
