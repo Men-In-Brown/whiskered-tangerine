@@ -63,7 +63,12 @@ title: Assignment
         });*/
 
         //if(entryExists) {
-          var assignment = data[id-1];
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id === targetId) {
+                    assignment = data[i];
+                    break; // Stop the loop once the assignment is found
+                }
+            }
             if (assignment) {
                 html = '<h1 style="font-size: 2.2em; font-weight: bold; margin-bottom: 0; font-family: Oxygen;">' + assignment.title + '</h1>';
                 html += '<p style="font-size: 0.8em; font-style: italic; margin-bottom: 0; font-family: Oxygen;">Worth ' + assignment.maxPoints + ' Points --- <a href="' + assignment.link + '" style="text-decoration: underline;">Corresponding Notebook</a></p>';
