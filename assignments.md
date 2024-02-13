@@ -64,9 +64,9 @@ title: Assignment
 
         //if(entryExists) {
             for (var i = 0; i < data.length; i++) {
-                if (data[i].id === targetId) {
+                if (data[i].id === id) {
                     assignment = data[i];
-                    break; // Stop the loop once the assignment is found
+                    break;
                 }
             }
             if (assignment) {
