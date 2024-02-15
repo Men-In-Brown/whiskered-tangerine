@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Issues Frontend
+display: none
 ---
 
 <html lang="en">
